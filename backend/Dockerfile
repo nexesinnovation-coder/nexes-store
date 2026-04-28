@@ -4,7 +4,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /app
 
-COPY backend/ /app/
+COPY . .
 
 EXPOSE 10000
 
