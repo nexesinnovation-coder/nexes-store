@@ -1,8 +1,9 @@
 <?php
 return [
-  'host' => '127.0.0.1',
-  'database' => 'nexes_store',
-  'user' => 'root',
-  'password' => '',
-  'charset' => 'utf8mb4'
+  'host' => getenv('DB_HOST') ?: 'localhost',
+  'port' => getenv('DB_PORT') ?: '3306',
+  'database' => getenv('DB_NAME') ?: 'nexes_store',
+  'user' => getenv('DB_USER') ?: 'root',
+  'password' => getenv('DB_PASS') ?: '',
+  'charset' => 'utf8mb4',
 ];
