@@ -1,7 +1,7 @@
 <?php
 function db() {
   $c = require __DIR__ . '/database.php';
-  $dsn = "mysql:host={$c['host']};dbname={$c['database']};charset={$c['charset']}";
+  $dsn = "mysql:host={$c['host']};port={$c['port']};dbname={$c['database']};charset={$c['charset']}";
   return new PDO($dsn, $c['user'], $c['password'], [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]);
 }
 function json_response($data, $code = 200) {
